@@ -1,0 +1,87 @@
+.effort {
+    @include adaptiveClamp(padding-top, 120, 60);
+    &__container {
+    }
+    h2 {
+        @include adaptiveClamp(margin-top, 40, 20);
+        @include adaptiveClamp(margin-bottom, 40, 20);
+        text-align: center;
+        @include adaptiveClamp(max-width, 976, 400);
+        margin: 0 auto;
+    }
+    &__sub-text {
+        text-align: center;
+        max-width: rem(1300);
+        margin: 0 auto;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:nth-child(1) {
+            img {
+                @include adaptiveClamp(max-width, 410, 250);
+            }
+        }
+            img {
+                display: block;
+                @include adaptiveClamp(max-width, 495, 300);
+                width: 100%;
+            }
+            @media(max-width:780px){
+                &:nth-child(1) {
+                    order: 2;
+                }
+                &:nth-child(4) {
+                    order: 4;
+                }
+                &:nth-child(5) {
+                    order: 6;
+                }
+            }
+        
+    }
+    .delivers__row {
+        @include adaptiveClamp(column-gap, 100, 50);
+        @media(max-width:780px){
+            grid-template-columns: 1fr;
+        }
+    }
+    .delivers__item {
+            @media(max-width:780px){
+                &:nth-child(2) {
+                    order: 1;
+                }
+                &:nth-child(3) {
+                    order: 3;
+                }
+                &:nth-child(6) {
+                    order: 5;
+                }
+            }
+    }
+}
+
+.connected {
+    padding-bottom: rem(75);
+    .services {
+       
+        &__container {
+        }
+    
+        &__content {
+            background: #000;
+            h2 {
+                color: var(--white-color);
+                @include adaptiveClamp(max-width, 1047, 500);
+            }
+        }
+    
+        &__button {
+            background: linear-gradient(90deg, #00F6FF 0%, #7C9BFF 45.93%, #E498FF 100%);
+        }
+    }
+}
+
+

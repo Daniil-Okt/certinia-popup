@@ -1,0 +1,100 @@
+.popup {
+
+    &__wrapper {
+    }
+
+    &__content {
+        border-radius: 10px;
+        background: none;
+        max-width: rem(300);
+        overflow: hidden;
+    }
+
+    &__top {
+        height: rem(60);
+        background: #008D30;
+        padding: rem(5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            color: var(--white-color);
+            font-size: rem(20);
+        }
+
+    }
+
+    &__body {
+        background: #fff;
+        padding: rem(26) rem(17);
+        min-height: rem(343);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        img {
+            width: rem(80);
+            animation: rotateAnimation 1s linear infinite;
+        }
+        p.load {
+            margin-top: rem(22);
+            color: #008D30;
+            @include adaptiveClamp(font-size, 24, 22);
+        }
+    }
+}
+@keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+
+.popup-error {
+    .popup__top {
+        background: #F00;
+        svg {
+            width: rem(43);
+            height: rem(43);
+        }
+    }
+    .popup__body {
+        justify-content: start;
+        text-align: center;
+    }
+    &__title {
+        color: #242424;
+        font-size: rem(40);
+        margin-bottom: rem(8);
+    }
+
+    &__sub-text {
+        color: #333;
+        font-size: rem(16);
+        margin-bottom: rem(48);
+    }
+
+    &__text {
+        margin-bottom: rem(16);
+        font-size: rem(24);
+    }
+
+    &__button {
+        width: 100%;
+        text-align: center;
+        padding: rem(3) rem(10);
+        border-radius: 5px;
+        background: #008D30;
+        font-size: 20px;
+        color: var(--white-color);
+        font-weight: 700;
+        transition: all 0.3s ease  0s;
+        cursor: pointer;
+        &:hover {
+            background: #006823;
+        }
+    }
+}

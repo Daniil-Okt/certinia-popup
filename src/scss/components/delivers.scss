@@ -1,0 +1,79 @@
+.delivers {
+
+    &__container {
+    }
+
+    &__title {
+        @include adaptiveClamp(padding-top, 280, 240);
+        @include adaptiveClamp(padding-bottom, 60, 30);
+        background: #F0F0F0;
+        h2 {
+            text-align: center;
+        }
+    }
+
+    &__row {   
+        @include adaptiveClamp(padding-top, 60, 30);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include adaptiveClamp(row-gap, 60, 30);
+        @include adaptiveClamp(column-gap, 30, 15);
+        @media(max-width:550px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+    }
+}
+.item-delivers {
+    &__line {
+        @include adaptiveClamp(height, 30, 15);
+        width: 100%;
+        background: linear-gradient(90deg, #E498FF 0%, #00F6FF 100%);
+        @include adaptiveClamp(margin-bottom, 30, 20);
+    }
+
+    &__sub-text {
+        font-weight: 700;
+        @include adaptiveClamp(margin-bottom, 40, 15);
+    }
+    h3 {
+        @include adaptiveClamp(margin-bottom, 30, 15);
+    }
+
+    &__text {
+    }
+}
+
+.services {
+    @include adaptiveClamp(padding-top, 60, 30);
+    &__container {
+    }
+
+    &__content {
+        @include adaptiveClamp(padding-top, 120, 40);
+        @include adaptiveClamp(padding-bottom, 120, 40);
+        @include adaptiveClamp(padding-left, 112, 20);
+        @include adaptiveClamp(padding-right, 112, 20);
+        background: #C46BFF;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: rem(40);
+        @media(max-width:715px){
+            flex-direction: column;
+            text-align: center;
+            gap: rem(30);
+        }
+    }
+    h2 {
+        @include adaptiveClamp(max-width, 945, 500);
+    }
+    &__button {
+        gap: rem(12);
+        min-width: rem(208.5);
+    }
+}
+
+

@@ -1,0 +1,30 @@
+.tabs {
+
+  // .tabs__nav
+  &__nav {
+    
+  }
+
+  // .tabs__trigger
+  &__trigger {
+    transition: 0.2s ease-in-out;
+
+    &.active {
+      
+    }
+  }
+
+  // .tabs__content
+  &__content {
+  }
+
+  // .tabs__panel
+  &__panel {
+    animation: fade-up-big 0.4s forwards;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
